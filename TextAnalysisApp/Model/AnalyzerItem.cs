@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using TextApp.Analyzers;
-using TextApp.View.Items;
+using TextAnalysisApp.Analyzers;
+using TextAnalysisApp.View.Items;
 
-namespace TextApp.Model
+namespace TextAnalysisApp.Model
 {
     internal class AnalyzerItem
     {
@@ -25,7 +25,7 @@ namespace TextApp.Model
             List<string> parametersValues = AnalyzerParameterItems
                 .Select(item => item.Value)
                 .ToList();
-            return analyzer.Analyse(text, parametersValues);
+            return analyzer.Analyze(text, parametersValues);
         }
     }
 }

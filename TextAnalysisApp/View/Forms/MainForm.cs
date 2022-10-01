@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using TextApp.Model;
+using TextAnalysisApp.Model;
 
-namespace TextApp.View.Forms
+namespace TextAnalysisApp.View.Forms
 {
     public partial class MainForm : Form
     {
@@ -13,7 +13,7 @@ namespace TextApp.View.Forms
         public MainForm()
         {
             InitializeComponent();
-            items = AnalyzerFactory.createAnalyzerItems();
+            items = AnalyzerFactory.CreateAnalyzerItems();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -41,8 +41,7 @@ namespace TextApp.View.Forms
 
         private void loadFileButton_Click(object sender, EventArgs e)
         {
-            analyzeButton_Click(sender, e);
-            text = ""; // todo: реализовать загрузку текста из файла
+            // todo: реализовать загрузку текста из файла
         }
     }
 }

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TextApp.Properties
+namespace TextAnalysisApp.Properties
 {
 
 

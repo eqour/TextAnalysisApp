@@ -1,4 +1,4 @@
-﻿namespace TextApp.View.Forms
+﻿namespace TextAnalysisApp.View.Forms
 {
     partial class MainForm
     {

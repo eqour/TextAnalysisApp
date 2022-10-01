@@ -1,4 +1,4 @@
-﻿namespace TextApp.View.Items
+﻿namespace TextAnalysisApp.View.Items
 {
     partial class AnalyzerParameterItem
     {

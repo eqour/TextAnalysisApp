@@ -1,4 +1,4 @@
-﻿namespace TextApp.Model
+﻿namespace TextAnalysisApp.Model
 {
     internal class AnalysisResult
     {

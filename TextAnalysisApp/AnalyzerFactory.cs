@@ -1,19 +1,19 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using TextApp.Analyzers;
+using TextAnalysisApp.Analyzers;
 
-namespace TextApp.Model
+namespace TextAnalysisApp.Model
 {
     internal class AnalyzerFactory
     {
-        public static List<AnalyzerItem> createAnalyzerItems()
+        public static List<AnalyzerItem> CreateAnalyzerItems()
         {
-            return createAnalyzers()
+            return CreateAnalyzers()
                 .Select(analyzer => new AnalyzerItem(analyzer))
                 .ToList();
         }
 
-        private static List<IAnalyzer> createAnalyzers()
+        private static List<IAnalyzer> CreateAnalyzers()
         {
             List<IAnalyzer> analyzers = new List<IAnalyzer>();
             return analyzers;

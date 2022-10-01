@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
-using TextApp.View.Forms;
+using TextAnalysisApp.View.Forms;
 
-namespace TextApp
+namespace TextAnalysisApp
 {
     internal static class Program
     {

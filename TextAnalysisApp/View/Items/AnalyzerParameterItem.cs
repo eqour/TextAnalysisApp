@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace TextApp.View.Items
+namespace TextAnalysisApp.View.Items
 {
     public partial class AnalyzerParameterItem : UserControl
     {
