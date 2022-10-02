@@ -52,7 +52,7 @@ namespace TextAnalysisApp.View.Forms
 
         private void loadFileButton_Click(object sender, EventArgs e)
         {
-            // todo: реализовать загрузку текста из файла
+            // todo: реализовать загрузку текста из файла (задача #1)
         }
     }
 }

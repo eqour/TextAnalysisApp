@@ -49,6 +49,7 @@
     <Compile Include="AnalyzerFactory.cs" />
     <Compile Include="Exceptions\AnalyzerException.cs" />
     <Compile Include="Model\AnalysisResult.cs" />
+    <Compile Include="Utils\TextParser.cs" />
     <Compile Include="View\Items\AnalyzerParameterItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
