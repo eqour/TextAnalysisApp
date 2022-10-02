@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using TextAnalysisApp.Exceptions;
 using TextAnalysisApp.Model;
 
 namespace TextAnalysisApp.View.Forms
@@ -34,8 +35,18 @@ namespace TextAnalysisApp.View.Forms
             resultsListView.Items.Clear();
             foreach (var checkedItem in analyzersListBox.CheckedItems)
             {
-                AnalysisResult result = (checkedItem as AnalyzerItem).ExecuteAnalysis(text);
-                resultsListView.Items.Add(new ListViewItem(new string[] { result.Name, result.Value }));
+                try
+                {
+                    AnalysisResult result = (checkedItem as AnalyzerItem).ExecuteAnalysis(text);
+                    resultsListView.Items.Add(new ListViewItem(new string[] { result.Name, result.Value }));
+                }
+                catch (AnalyzerException exception)
+                {
+                    resultsListView.Items.Clear();
+                    analyzersListBox.SelectedIndex = analyzersListBox.Items.IndexOf(checkedItem);
+                    MessageBox.Show(exception.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    break;
+                }
             }
         }
 
