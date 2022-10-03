@@ -10,8 +10,19 @@ namespace TextAnalysisApp.Utils
     {
         public static List<string> ParseIntoWords(string text)
         {
-            // todo: задача #2
-            throw new NotImplementedException();
+            
+            String s = "На морских берегах я сижу, не в пространное море гляжу, но на небо глаза возвожу.";
+
+            s = new string(s.Where(c => !char.IsPunctuation(c)).ToArray());
+
+            Console.WriteLine(s);
+
+            List<string> parts = new List<string>();
+
+            parts.Add("На морских берегах я сижу, не в пространное море гляжу, но на небо глаза возвожу.");
+            return(parts);
+
+
         }
 
         public static List<string> ParseIntoSentences(string text)
