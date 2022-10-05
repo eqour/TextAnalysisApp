@@ -13,8 +13,11 @@ namespace TextAnalysisApp.Analyzers
 
         public AnalysisResult Analyze(string text, List<string> parameters)
         {
-            double value = TextParser.ParseIntoSentences(text)
-                .Average(sentence => sentence.Length);
+            double value = 0;
+            List<string> sentences = TextParser.ParseIntoSentences(text);
+            if (sentences.Count != 0)
+                value = TextParser.ParseIntoSentences(text)
+                    .Average(sentence => sentence.Length);
             return new AnalysisResult("Средняя длина предложения", value.ToString());
         }
     }

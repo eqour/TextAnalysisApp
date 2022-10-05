@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace TextAnalysisApp.Utils
 {
@@ -15,7 +16,9 @@ namespace TextAnalysisApp.Utils
 
         public static List<string> ParseIntoSentences(string text)
         {
-            return new List<string>(text.Split(sentenceEndings));
+            return new List<string>(text.Split(sentenceEndings))
+                .Where(sentence => sentence.Length > 0)
+                .ToList();
         }
         
         public static List<string> ParseIntoPunctuationMarks(string text)
