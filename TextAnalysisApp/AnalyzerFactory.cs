@@ -16,6 +16,11 @@ namespace TextAnalysisApp.Model
         private static List<IAnalyzer> CreateAnalyzers()
         {
             List<IAnalyzer> analyzers = new List<IAnalyzer>();
+            analyzers.Add(new WordCountAnalyzer());
+            analyzers.Add(new WordByFirstLetterCountAnalyzer());
+            analyzers.Add(new SentenceCountAnalyzer());
+            analyzers.Add(new AverageSentenceLengthAnalyzer());
+            analyzers.Add(new PunctuationMarksCountAnalyzer());
             return analyzers;
         }
     }
