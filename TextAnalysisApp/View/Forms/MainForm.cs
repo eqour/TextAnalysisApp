@@ -55,7 +55,6 @@ namespace TextAnalysisApp.View.Forms
 
         private void loadFileButton_Click(object sender, EventArgs e)
         {
-            // todo: реализовать загрузку текста из файла (задача #1)
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "txt files (*.txt)|*.txt";
 
