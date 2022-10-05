@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using TextAnalysisApp.Exceptions;
 using TextAnalysisApp.Model;
+using System.IO;
+using System.Text;
 
 namespace TextAnalysisApp.View.Forms
 {
@@ -10,6 +12,7 @@ namespace TextAnalysisApp.View.Forms
     {
         private readonly List<AnalyzerItem> items;
         private string text;
+        private string fileName;
 
         public MainForm()
         {
@@ -53,6 +56,15 @@ namespace TextAnalysisApp.View.Forms
         private void loadFileButton_Click(object sender, EventArgs e)
         {
             // todo: реализовать загрузку текста из файла (задача #1)
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "txt files (*.txt)|*.txt";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                fileName = openFileDialog.FileName;
+                text = File.ReadAllText(fileName, Encoding.UTF8);
+                analyzeButton.Enabled = true;
+            }
         }
     }
 }
