@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Windows.Forms;
 using TextAnalysisApp.Exceptions;
 using TextAnalysisApp.Model;
@@ -52,7 +53,13 @@ namespace TextAnalysisApp.View.Forms
 
         private void loadFileButton_Click(object sender, EventArgs e)
         {
-            // todo: реализовать загрузку текста из файла (задача #1)
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Текстовые файлы|*.txt|Все файлы|*.*";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                text = File.ReadAllText(dialog.FileName);
+                analyzeButton.Enabled = true;
+            }
         }
     }
 }
