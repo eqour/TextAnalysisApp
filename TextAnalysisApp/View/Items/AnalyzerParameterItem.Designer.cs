@@ -35,7 +35,7 @@
             // textBox
             // 
             this.textBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox.Location = new System.Drawing.Point(100, 3);
+            this.textBox.Location = new System.Drawing.Point(127, 3);
             this.textBox.Name = "textBox";
             this.textBox.Size = new System.Drawing.Size(100, 20);
             this.textBox.TabIndex = 0;
@@ -44,19 +44,21 @@
             // 
             this.label.AutoSize = true;
             this.label.Location = new System.Drawing.Point(3, 6);
+            this.label.MaximumSize = new System.Drawing.Size(90, 0);
             this.label.Name = "label";
             this.label.Size = new System.Drawing.Size(37, 13);
             this.label.TabIndex = 1;
             this.label.Text = "Текст";
             // 
-            // AnalysisParameterItem
+            // AnalyzerParameterItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.Controls.Add(this.label);
             this.Controls.Add(this.textBox);
-            this.Name = "AnalysisParameterItem";
-            this.Size = new System.Drawing.Size(203, 26);
+            this.Name = "AnalyzerParameterItem";
+            this.Size = new System.Drawing.Size(230, 26);
             this.ResumeLayout(false);
             this.PerformLayout();
 
