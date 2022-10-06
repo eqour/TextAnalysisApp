@@ -16,11 +16,20 @@ namespace TextAnalysisApp.Utils
 
         public static List<string> ParseIntoSentences(string text)
         {
-            return new List<string>(text.Split(sentenceEndings))
-                .Where(sentence => sentence.Length > 0)
-                .ToList();
+            List<string> ans = new List<string>();
+            int start = 0;
+            for (int i = 1; i < text.Length; i++)
+            {
+                if (sentenceEndings.Contains(text[i - 1]) && !sentenceEndings.Contains(text[i]) || i == text.Length - 1)
+                {
+                    string sentence = text.Substring(start, i - start + (i == text.Length - 1 ? 1 : 0));
+                    ans.Add(sentence.Trim());
+                    start = i;
+                }
+            }
+            return ans;
         }
-        
+
         public static List<string> ParseIntoPunctuationMarks(string text)
         {
             return Parse(text, (t, i) => char.IsPunctuation(t, i) && !IsHyphen(t, i));
