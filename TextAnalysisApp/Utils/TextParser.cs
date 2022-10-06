@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace TextAnalysisApp.Utils
@@ -16,8 +17,8 @@ namespace TextAnalysisApp.Utils
 
         public static List<string> ParseIntoSentences(string text)
         {
-            // todo: задача #3
-            throw new NotImplementedException();
+            List<string> ntext = Regex.Split(text, @"(?<=[\w\s](?:[\.\!\?]+[\x20]*[\x22\xBB]*))(?:\s+(?![\x22\xBB](?!\w)))").ToList();
+            return ntext;
         }
         
         public static List<string> ParseIntoPunctuationMarks(string text)
