@@ -47,8 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnalyzerFactory.cs" />
-    <Compile Include="Analyzers\AverageSentenceLenghtAnalyzer.cs" />
-    <Compile Include="Analyzers\SentenceCountAnalyzer.cs" />
     <Compile Include="Exceptions\AnalyzerException.cs" />
     <Compile Include="Model\AnalysisResult.cs" />
     <Compile Include="Utils\TextParser.cs" />
