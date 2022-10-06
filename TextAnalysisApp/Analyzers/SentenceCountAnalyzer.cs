@@ -17,7 +17,7 @@ namespace TextAnalysisApp.Analyzers
         public AnalysisResult Analyze(string text, List<string> parameters)
         {
             int count = TextParser.ParseIntoSentences(text).Count;
-            return new AnalysisResult($"{count} предложений содержится в тексте.", count.ToString());
+            return new AnalysisResult($"Количество предложений в тексте.", count.ToString());
         }
     }
 }
