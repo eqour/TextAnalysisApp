@@ -23,7 +23,7 @@ namespace TextAnalysisApp.Analyzers
                 amount += l.Length - 1;
             }
             amount /= src.Count;
-            return new AnalysisResult($"Средняя длина предложений {amount}", amount.ToString());
+            return new AnalysisResult($"Средняя длина предложений.", amount.ToString());
         }
     }
 }
