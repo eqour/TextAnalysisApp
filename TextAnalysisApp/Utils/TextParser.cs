@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TextAnalysisApp.Utils
 {
-    internal class TextParser
+    public class TextParser
     {
         public static List<string> ParseIntoWords(string text)
         {
