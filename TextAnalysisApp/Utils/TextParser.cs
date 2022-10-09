@@ -18,7 +18,11 @@ namespace TextAnalysisApp.Utils
 
         public static List<string> ParseIntoSentences(string text)
         {
-            List<string> ntext = Regex.Split(text, @"(?<=[\w\s](?:[\.\!\?]+[\x20]*[\x22\xBB]*))(?:\s+(?![\x22\xBB](?!\w)))").ToList();
+            List<string> ntext = new List<string>();
+            if (text.Trim() != "")
+            {
+                ntext = Regex.Split(text, @"(?<=[\w\s](?:[\.\!\?]+[\x20]*[\x22\xBB]*))(?:\s+(?![\x22\xBB](?!\w)))").ToList();
+            }
             return ntext;
         }
         
