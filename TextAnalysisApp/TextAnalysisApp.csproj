@@ -32,6 +32,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <GenerateResourceMSBuildArchitecture>CurrentArchitecture</GenerateResourceMSBuildArchitecture>
+    <GenerateResourceMSBuildRuntime>CurrentRuntime</GenerateResourceMSBuildRuntime>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -48,6 +52,9 @@
   <ItemGroup>
     <Compile Include="AnalyzerFactory.cs" />
     <Compile Include="Analyzers\WordsByFirstLetterAnalyzer.cs" />
+    <Compile Include="Analyzers\AverageSentenceLenghtAnalyzer.cs" />
+    <Compile Include="Analyzers\PunctuationMarksCountAnalyzer.cs" />
+    <Compile Include="Analyzers\SentenceCountAnalyzer.cs" />
     <Compile Include="Exceptions\AnalyzerException.cs" />
     <Compile Include="Model\AnalysisResult.cs" />
     <Compile Include="Utils\TextParser.cs" />

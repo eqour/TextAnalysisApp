@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using TextAnalysisApp.Analyzers;
 
@@ -17,6 +17,9 @@ namespace TextAnalysisApp.Model
         {
             List<IAnalyzer> analyzers = new List<IAnalyzer>();
             analyzers.Add(new WordsByFirstLetterAnalyzer());
+            analyzers.Add(new AverageSentenceLenghtAnalyzer());
+            analyzers.Add(new SentenceCountAnalyzer());
+            analyzers.Add(new PunctuationMarksCountAnalyzer());
             return analyzers;
         }
     }
