@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnalyzerFactory.cs" />
+    <Compile Include="Analyzers\WordsByFirstLetterAnalyzer.cs" />
     <Compile Include="Analyzers\AverageSentenceLenghtAnalyzer.cs" />
     <Compile Include="Analyzers\PunctuationMarksCountAnalyzer.cs" />
     <Compile Include="Analyzers\SentenceCountAnalyzer.cs" />

@@ -134,7 +134,7 @@
             this.loadFileButton.Name = "loadFileButton";
             this.loadFileButton.Size = new System.Drawing.Size(250, 23);
             this.loadFileButton.TabIndex = 6;
-            this.loadFileButton.Text = "Загрузить файл";
+            this.loadFileButton.Text = "Загрузить текст из файла";
             this.loadFileButton.UseVisualStyleBackColor = true;
             this.loadFileButton.Click += new System.EventHandler(this.loadFileButton_Click);
             // 
