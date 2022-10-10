@@ -55,6 +55,7 @@
     <Compile Include="Analyzers\AverageSentenceLenghtAnalyzer.cs" />
     <Compile Include="Analyzers\PunctuationMarksCountAnalyzer.cs" />
     <Compile Include="Analyzers\SentenceCountAnalyzer.cs" />
+    <Compile Include="Analyzers\WordCountAnalyzer.cs" />
     <Compile Include="Exceptions\AnalyzerException.cs" />
     <Compile Include="Model\AnalysisResult.cs" />
     <Compile Include="Utils\TextParser.cs" />
