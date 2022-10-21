@@ -22,8 +22,8 @@ namespace TextAnalysisAppTest.AnalyzersTests
             "36",
             "81",
             "0",
-            "52,33",
-            "82,33",
+            52.33.ToString(),
+            82.33.ToString(),
             "89"
         };
 
