@@ -8,7 +8,7 @@ using TextAnalysisApp.Utils;
 
 namespace TextAnalysisApp.Analyzers
 {
-    class WordCountAnalyzer : IAnalyzer
+    public class WordCountAnalyzer : IAnalyzer
     {
         public string Name => "Подсчёт слов в тексте";
 

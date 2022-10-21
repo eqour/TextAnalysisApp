@@ -6,7 +6,7 @@ using TextAnalysisApp.Utils;
 
 namespace TextAnalysisApp.Analyzers
 {
-    internal class WordsByFirstLetterAnalyzer : IAnalyzer
+    public class WordsByFirstLetterAnalyzer : IAnalyzer
     {
         public string Name => "Подсчёт слов в тексте, начинающихся с определённой буквы.";
 

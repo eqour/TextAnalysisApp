@@ -8,7 +8,7 @@ using TextAnalysisApp.Utils;
 
 namespace TextAnalysisApp.Analyzers
 {
-    internal class AverageSentenceLenghtAnalyzer : IAnalyzer
+    public class AverageSentenceLenghtAnalyzer : IAnalyzer
     {
         public string Name => "Подсчёт средней длины предложений";
 
