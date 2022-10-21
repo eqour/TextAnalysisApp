@@ -3,7 +3,7 @@ using TextAnalysisApp.Model;
 
 namespace TextAnalysisApp.Analyzers
 {
-    internal interface IAnalyzer
+    public interface IAnalyzer
     {
         string Name { get; }
         List<string> Parameters { get; }

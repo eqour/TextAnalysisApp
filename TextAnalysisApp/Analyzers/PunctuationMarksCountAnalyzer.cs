@@ -4,7 +4,7 @@ using TextAnalysisApp.Utils;
 
 namespace TextAnalysisApp.Analyzers
 {
-    internal class PunctuationMarksCountAnalyzer : IAnalyzer
+    public class PunctuationMarksCountAnalyzer : IAnalyzer
     {
         public string Name => "Количество знаков препинания";
 

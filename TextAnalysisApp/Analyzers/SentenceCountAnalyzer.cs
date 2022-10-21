@@ -8,7 +8,7 @@ using TextAnalysisApp.Utils;
 
 namespace TextAnalysisApp.Analyzers
 {
-    internal class SentenceCountAnalyzer : IAnalyzer
+    public class SentenceCountAnalyzer : IAnalyzer
     {
         public string Name => "Подсчёт предложений в тексте.";
 

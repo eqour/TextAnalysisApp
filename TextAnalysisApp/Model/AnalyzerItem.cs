@@ -5,7 +5,7 @@ using TextAnalysisApp.View.Items;
 
 namespace TextAnalysisApp.Model
 {
-    internal class AnalyzerItem
+    public class AnalyzerItem
     {
         public string Name => analyzer.Name;
         public List<AnalyzerParameterItem> AnalyzerParameterItems { get; }

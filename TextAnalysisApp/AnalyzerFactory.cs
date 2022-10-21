@@ -1,10 +1,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using TextAnalysisApp.Analyzers;
+using TextAnalysisApp.Model;
 
-namespace TextAnalysisApp.Model
+namespace TextAnalysisApp
 {
-    internal class AnalyzerFactory
+    public class AnalyzerFactory
     {
         public static List<AnalyzerItem> CreateAnalyzerItems()
         {
@@ -13,7 +14,7 @@ namespace TextAnalysisApp.Model
                 .ToList();
         }
 
-        private static List<IAnalyzer> CreateAnalyzers()
+        public static List<IAnalyzer> CreateAnalyzers()
         {
             List<IAnalyzer> analyzers = new List<IAnalyzer>();
             analyzers.Add(new WordCountAnalyzer());
