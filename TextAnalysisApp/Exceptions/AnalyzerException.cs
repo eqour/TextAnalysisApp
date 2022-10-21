@@ -2,7 +2,7 @@
 
 namespace TextAnalysisApp.Exceptions
 {
-    internal class AnalyzerException : Exception
+    public class AnalyzerException : Exception
     {
         public AnalyzerException()
         {

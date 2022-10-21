@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace TextAnalysisAppTest
 {
@@ -43,5 +44,15 @@ namespace TextAnalysisAppTest
             new string[] { ":", ",", ".", ",", "-", "!", ",", "-", "!" },
             new string[] { ",", ".", "." }
         };
+
+        public static object[] ConfigureCases(Func<int, object[]> casesSelector)
+        {
+            List<object[]> result = new List<object[]>();
+            for (int i = 0; i < Texts.Length; i++)
+            {
+                result.Add(casesSelector.Invoke(i));
+            }
+            return result.ToArray();
+        }
     }
 }

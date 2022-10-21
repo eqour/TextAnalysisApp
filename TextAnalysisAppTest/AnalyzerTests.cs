@@ -10,9 +10,9 @@ namespace TextAnalysisAppTest
         [TestCaseSource(nameof(Analyzers))]
         public void DefaultAnalyzerTest(IAnalyzer analyzer)
         {
-            Assert.AreNotEqual(analyzer.Name, null);
-            Assert.AreNotEqual(analyzer.Name.Trim().Length, 0);
-            Assert.AreNotEqual(analyzer.Parameters, null);
+            Assert.NotNull(analyzer.Name);
+            Assert.IsNotEmpty(analyzer.Name);
+            Assert.NotNull(analyzer.Parameters);
         }
 
         private static object[] Analyzers = AnalyzerFactory.CreateAnalyzers().Select(a => new object[] { a }).ToArray();
