@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TextAnalysisApp.Model;
 using TextAnalysisApp.Utils;
 
@@ -16,14 +13,14 @@ namespace TextAnalysisApp.Analyzers
 
         public AnalysisResult Analyze(string text, List<string> parameters)
         {
-            int amount = 0;
+            double amount = 0;
             var src = TextParser.ParseIntoSentences(text);
             foreach (var l in src)
             {
-                amount += l.Length - 1;
+                amount += l.Length;
             }
-            amount /= src.Count;
-            return new AnalysisResult($"Средняя длина предложений.", amount.ToString());
+            double result = src.Count == 0 ? 0 : Math.Round(amount /= src.Count, 2);
+            return new AnalysisResult($"Средняя длина предложений", result.ToString());
         }
     }
 }

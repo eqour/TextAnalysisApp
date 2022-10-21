@@ -8,7 +8,7 @@ namespace TextAnalysisApp.Analyzers
 {
     public class WordsByFirstLetterAnalyzer : IAnalyzer
     {
-        public string Name => "Подсчёт слов в тексте, начинающихся с определённой буквы.";
+        public string Name => "Подсчёт слов в тексте, начинающихся с определённой буквы";
 
         public List<string> Parameters => new List<string>() { "Первая буква слова" };
 
@@ -16,7 +16,9 @@ namespace TextAnalysisApp.Analyzers
         {
             string letter = parameters[0];
             if (letter.Length != 1)
-                throw new AnalyzerException("Значение парметра \"Первая буква слова\" должно состоять из одного символа.");
+                throw new AnalyzerException("Значение парметра \"Первая буква слова\" должно состоять из одного символа");
+            if (!char.IsLetter(letter[0]))
+                throw new AnalyzerException("Значение парметра \"Первая буква слова\" должно являться буквой");
             int amount = TextParser.ParseIntoWords(text)
                 .Where(word => word.StartsWith(letter))
                 .Count();
