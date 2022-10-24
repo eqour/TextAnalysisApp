@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using TextAnalysisApp.Exceptions;
 using TextAnalysisApp.Model;
-using System.IO;
-using System.Text;
+using TextAnalysisApp.Utils;
 
 namespace TextAnalysisApp.View.Forms
 {
@@ -61,7 +60,7 @@ namespace TextAnalysisApp.View.Forms
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 fileName = openFileDialog.FileName;
-                text = File.ReadAllText(fileName, Encoding.UTF8);
+                text = TextFileReader.ReadFile(fileName);
                 analyzeButton.Enabled = true;
             }
         }
