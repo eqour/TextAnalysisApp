@@ -30,7 +30,7 @@ jobs:
       uses: microsoft/setup-msbuild@v1.1.3
 
     - name: Create publication
-      run: msbuild /target:publish /property:PublishDir=./publication /property:PublishProfile=./Properties/PublishProfiles/ClickOnceProfile.pubxml
+      run: msbuild /t:publish /p:PublishDir=./publication /p:Configuration=Release /p:PublishProfile=./Properties/PublishProfiles/ClickOnceProfile.pubxml
     
     - name: Zip the application
       run: 7z a -tzip TextAnalysisApp.zip ./TextAnalysisApp/publication/*
@@ -60,5 +60,5 @@ jobs:
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
         asset_path: ./TextAnalysisApp.zip
-        asset_name: Application.zip
+        asset_name: TextAnalysisApp.zip
         asset_content_type: application/zip
