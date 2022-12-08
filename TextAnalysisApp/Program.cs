@@ -3,12 +3,12 @@ using TextAnalysisApp.View.Forms;
 namespace TextAnalysisApp
 {
     /// <summary>
-    /// Содержит точку входа в приложение
+    /// РЎРѕРґРµСЂР¶РёС‚ С‚РѕС‡РєСѓ РІС…РѕРґР° РІ РїСЂРёР»РѕР¶РµРЅРёРµ
     /// </summary>
     internal static class Program
     {
         /// <summary>
-        ///  Главная точка входа в приложение
+        ///  Р“Р»Р°РІРЅР°СЏ С‚РѕС‡РєР° РІС…РѕРґР° РІ РїСЂРёР»РѕР¶РµРЅРёРµ
         /// </summary>
         [STAThread]
         static void Main()
