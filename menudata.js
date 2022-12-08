@@ -21,4 +21,24 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 for the JavaScript code in this file
 */
 var menudata={children:[
-{text:"Титульная страница",url:"index.html"}]}
+{text:"Титульная страница",url:"index.html"},
+{text:"Пакеты",url:"namespaces.html",children:[
+{text:"Пакеты",url:"namespaces.html"}]},
+{text:"Классы",url:"annotated.html",children:[
+{text:"Классы",url:"annotated.html"},
+{text:"Алфавитный указатель классов",url:"classes.html"},
+{text:"Иерархия классов",url:"hierarchy.html"},
+{text:"Члены классов",url:"functions.html",children:[
+{text:"Указатель",url:"functions.html",children:[
+{text:"a",url:"functions.html#index_a"},
+{text:"c",url:"functions.html#index_c"},
+{text:"d",url:"functions.html#index_d"},
+{text:"e",url:"functions.html#index_e"},
+{text:"m",url:"functions.html#index_m"},
+{text:"n",url:"functions.html#index_n"},
+{text:"p",url:"functions.html#index_p"},
+{text:"r",url:"functions.html#index_r"},
+{text:"v",url:"functions.html#index_v"}]},
+{text:"Функции",url:"functions_func.html"},
+{text:"Переменные",url:"functions_vars.html"},
+{text:"Свойства",url:"functions_prop.html"}]}]}]}

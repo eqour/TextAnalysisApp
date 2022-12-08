@@ -1,0 +1,4 @@
+var searchData=
+[
+  ['parameters_72',['Parameters',['../classTextAnalysisApp_1_1Analyzers_1_1AverageSentenceLenghtAnalyzer.html#a8e93dad3ee6b432adac407e7be702914',1,'TextAnalysisApp.Analyzers.AverageSentenceLenghtAnalyzer.Parameters()'],['../classTextAnalysisApp_1_1Analyzers_1_1PunctuationMarksCountAnalyzer.html#aed88a780afa785f4d6b92d4d132d4d53',1,'TextAnalysisApp.Analyzers.PunctuationMarksCountAnalyzer.Parameters()'],['../classTextAnalysisApp_1_1Analyzers_1_1SentenceCountAnalyzer.html#a836962a33e64030327ce1f1e0b9dcebc',1,'TextAnalysisApp.Analyzers.SentenceCountAnalyzer.Parameters()'],['../classTextAnalysisApp_1_1Analyzers_1_1WordCountAnalyzer.html#aceee68162ddaa0719252eec15e2c9c43',1,'TextAnalysisApp.Analyzers.WordCountAnalyzer.Parameters()'],['../classTextAnalysisApp_1_1Analyzers_1_1WordsByFirstLetterAnalyzer.html#a1181219bca2b7d0c7ced6d41720c72c1',1,'TextAnalysisApp.Analyzers.WordsByFirstLetterAnalyzer.Parameters()']]]
+];
