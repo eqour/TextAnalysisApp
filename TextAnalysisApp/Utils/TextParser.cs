@@ -1,15 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+﻿using System.Text.RegularExpressions;
 
 namespace TextAnalysisApp.Utils
 {
+    /// <summary>
+    /// Содержит методы для разбора текста
+    /// </summary>
     public class TextParser
     {
+        /// <summary>
+        /// Разделители пробелов в тексте
+        /// </summary>
         private static readonly char[] voidSeparators = new char[] { ' ', '\t', '\n', '\r' };
+
+        /// <summary>
+        /// Выполняет разбор текста на слова
+        /// </summary>
+        /// <param name="text">Исходный текст</param>
+        /// <returns>Список слов</returns>
         public static List<string> ParseIntoWords(string text)
         {
             List<string> parts = new List<string>();
@@ -35,6 +42,11 @@ namespace TextAnalysisApp.Utils
             return (parts);
         }
 
+        /// <summary>
+        /// Выполняет разбор текста на предложения. В результирующие предложения входят завершающие их знаки препинания, если таковые присутствуют
+        /// </summary>
+        /// <param name="text">Исходный текст</param>
+        /// <returns>Список предложений</returns>
         public static List<string> ParseIntoSentences(string text)
         {
             List<string> ntext = new List<string>();
@@ -45,10 +57,22 @@ namespace TextAnalysisApp.Utils
             return ntext;
         }
         
+        /// <summary>
+        /// Выполняет разбор текста на знаки препинания
+        /// </summary>
+        /// <param name="text">Исходный текст</param>
+        /// <returns>Список знаков препинания</returns>
         public static List<string> ParseIntoPunctuationMarks(string text)
         {
             return Parse(text, (t, i) => char.IsPunctuation(t, i) && !IsHyphen(t, i));
         }
+
+        /// <summary>
+        /// Выполняет разбор текста на подстроки
+        /// </summary>
+        /// <param name="text">Исходный текст</param>
+        /// <param name="splitSubstringsPredicate">Функция, определяющая, является ли символ строки частью слова</param>
+        /// <returns></returns>
         private static List<string> Parse(string text, Func<string, int, bool> splitSubstringsPredicate)
         {
             List<string> ans = new List<string>();
@@ -57,11 +81,22 @@ namespace TextAnalysisApp.Utils
             return ans;
         }
 
+        /// <summary>
+        /// Разбивает текст по пробелам
+        /// </summary>
+        /// <param name="text">Исходный текст</param>
+        /// <returns>Список фрагментов текста, разделённых пробелами</returns>
         private static List<string> SplitTextWithVoids(string text)
         {
             return new List<string>(text.Split(voidSeparators));
         }
 
+        /// <summary>
+        /// Разбивает текст на подстроки с помощью функции
+        /// </summary>
+        /// <param name="text">Исходный текст</param>
+        /// <param name="predicate">Функция, определяющая, является ли символ строки частью слова</param>
+        /// <returns>Список подстрок</returns>
         private static List<string> SelectSubstrings(string text, Func<string, int, bool> predicate)
         {
             int start = -1, end = 0;
@@ -95,6 +130,12 @@ namespace TextAnalysisApp.Utils
             return ans;
         }
 
+        /// <summary>
+        /// Определяет, является ли символ текста дефисом
+        /// </summary>
+        /// <param name="textWithoutSpaces">Текст без пробелов</param>
+        /// <param name="indexOfDash">Индекс дефиса</param>
+        /// <returns>Истина, если символ является дефисом, иначе ложь</returns>
         private static bool IsHyphen(string textWithoutSpaces, int indexOfDash)
         {
             string t = textWithoutSpaces;

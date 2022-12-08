@@ -1,12 +1,17 @@
-using System.Collections.Generic;
-using System.Linq;
 using TextAnalysisApp.Analyzers;
 using TextAnalysisApp.Model;
 
 namespace TextAnalysisApp
 {
+    /// <summary>
+    /// Создаёт экземпляры классов анализаторов
+    /// </summary>
     public class AnalyzerFactory
     {
+        /// <summary>
+        /// Создаёт список элементов, хранящих данные об анализаторах и их параметрах в виде элементов управления
+        /// </summary>
+        /// <returns>Список экземпляров класса <see cref="AnalyzerItem"/></returns>
         public static List<AnalyzerItem> CreateAnalyzerItems()
         {
             return CreateAnalyzers()
@@ -14,6 +19,10 @@ namespace TextAnalysisApp
                 .ToList();
         }
 
+        /// <summary>
+        /// Создаёт список анализаторов
+        /// </summary>
+        /// <returns>Список экземпляров класса, реализующих интерфейс <see cref="IAnalyzer"/></returns>
         public static List<IAnalyzer> CreateAnalyzers()
         {
             List<IAnalyzer> analyzers = new List<IAnalyzer>();
